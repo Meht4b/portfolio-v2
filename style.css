@@ -96,7 +96,7 @@ p {
 }
 
 .projects h2{
-    margin-top: clamp(1rem, 10vw, 5rem);
+    margin-top: clamp(1rem, 20vw, 5rem);
 }
 
 .projects h2::after{
