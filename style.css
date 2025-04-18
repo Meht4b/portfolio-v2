@@ -19,6 +19,7 @@ body {
 }
 
 .container {
+    
     position: relative;
     padding-left: clamp(2rem, 5vw, 2rem);
     box-sizing: border-box;
@@ -129,7 +130,7 @@ p {
     align-self: flex-start;
     margin-top: clamp(1rem, 10vw, 5rem);
     margin-bottom: clamp(1rem, 5vw, 3.5rem);
-    padding-left: clamp(10px,1vw,3rem);
+    
 }
 
 .projects-cont{
@@ -137,23 +138,25 @@ p {
     position: relative;
     display: flex;
     gap: 10px;
-    overflow-x: hidden; 
+    
     width: 95svw;
     height: 80vh;
     scrollbar-width: none; /* For Firefox */
     -ms-overflow-style: none; /* For Internet Explorer and Edge */
-    }
+}
 
 .projects-inner-cont::-webkit-scrollbar {
         display: none; /* For Chrome, Safari, and Opera */
 }
 
 .projects-inner-cont{
+    box-sizing: border-box;
     position: absolute;
+    left: clamp(-2rem, -5vw, -2rem);
     display: flex;
     gap: 30px;
     overflow-x: auto; 
-    width: 100%;
+    width: 97vw;
     padding-bottom: 20px;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -246,7 +249,7 @@ a:hover {
     }
 
     .red-3{
-        top: 120vh;
+        top: 90vh;
         height: 150px;
         width: 100px;
         left: 0;
