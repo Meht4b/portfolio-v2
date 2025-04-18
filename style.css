@@ -137,21 +137,38 @@ p {
     position: relative;
     display: flex;
     gap: 10px;
-    overflow-y: hidden; 
+    overflow-x: hidden; 
     width: 95svw;
+    height: 80vh;
+    scrollbar-width: none; /* For Firefox */
+    -ms-overflow-style: none; /* For Internet Explorer and Edge */
+    }
+
+.projects-inner-cont::-webkit-scrollbar {
+        display: none; /* For Chrome, Safari, and Opera */
 }
 
+.projects-inner-cont{
+    position: absolute;
+    display: flex;
+    gap: 30px;
+    overflow-x: auto; 
+    width: 100%;
+    padding-bottom: 20px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
 
 
 
 .projects-mask{
     position: absolute;
-    /*background-image:linear-gradient(#1c1c1c 10%,transparent,transparent #1c1c1c); ;*/
-    background: rgba(0, 0, 255, 0.077);
+    background-image:linear-gradient(90deg,#1c1c1c 1%,transparent 4%,transparent 96%, #1c1c1c 99%); ;
+    
     height: 80vh;
-    width: 100vh;
+    width: 100%;
     z-index: 100;
-    left: -10vh;
+    
 }
 
 .project {
