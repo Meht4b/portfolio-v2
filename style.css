@@ -26,10 +26,12 @@ body {
     padding-top: clamp(1rem, 20vw, 7rem);
     margin-bottom: 100px;
     padding-bottom: 100px;
+
 }
 
 h1{
-    font-size: clamp(4rem, 20vw, 20rem);
+    
+    font-size: clamp(4rem, 10vw, 20rem);
     font-weight: bold;
     padding: 0px;
     margin: 0px;
@@ -76,13 +78,49 @@ p {
     width: clamp(1rem,60vw,40rem)
 }
 
-.red-rect{
-    background-color: #550000;
+
+.red-grid-cont{
+    z-index: -2;
+    position: absolute;
+
+}
+
+.red-grid-cont-1{
+    height: clamp(10rem, 60vh, 100rem);
+    width: clamp(10rem, 80vw, 100rem);
+    top: 10px;    
+    right: 10px;
+}
+
+.red-grid-cont-2{
+    height: clamp(10rem, 80vh, 100rem);
+    width: clamp(10rem, 50vw, 100rem);
+    top: 80vh;    
+    left: 10px;
 }
 
 .red-grid{
-    
+    position: absolute;
+    z-index: -3;
+    background-image:url('assets/grid.png');
+    background-size: 4rem 4rem;
+    width: 100%;height: 100%;
 }
+
+.red-grid-mask{
+    position: absolute;
+    z-index: -1;
+    width: 100%;height: 100%;
+    
+    background-image: radial-gradient(transparent,#1c1c1c);
+
+}
+
+.red-rect{
+    background-color: #550000;
+    z-index: -1;
+}
+
 
 .red-1{
     width: clamp(2rem,75vw,60rem);
@@ -90,5 +128,13 @@ p {
     position: absolute;
     right: 1rem;
     top: 3.5rem;
-    z-index: -1;
+    
+}
+
+.red-2{
+    width: clamp(2rem,75vw,60rem);
+    height: clamp(2rem,40vw,20rem);
+    position: absolute;
+    left: -0;
+    top: 25rem;
 }
