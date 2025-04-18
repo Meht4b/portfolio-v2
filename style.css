@@ -20,7 +20,7 @@ body {
 
 .container {
     position: relative;
-    padding-left: clamp(1rem, 5vw, 2rem);
+    padding-left: clamp(2rem, 5vw, 2rem);
     box-sizing: border-box;
     padding-right: clamp(1rem, 5vw, 2rem);
     padding-top: clamp(1rem, 20vw, 7rem);
@@ -31,7 +31,7 @@ body {
 
 h1{
     
-    font-size: clamp(4rem, 10vw, 20rem);
+    font-size: clamp(4rem, 18svw, 20rem);
     font-weight: bold;
     padding: 0px;
     margin: 0px;
@@ -44,6 +44,16 @@ h2{
     padding: 0;
     margin: 0;
 }
+
+h2::after{
+    content: '';
+    display: block;
+    width: 40%;
+    height: 1px;
+    background-color: var(--text-color);
+    margin-top: 10px;
+}
+
 h3{
     font-size: clamp(1.5rem, 5vw, 3rem);
     font-weight: 100;
@@ -59,23 +69,30 @@ p {
     margin: 0;
 }
 
-.container .intro h1{
+.intro h1{
     
     margin-bottom: clamp(1rem,3vh,30rem) ;
 }
 
-.container .intro p{
+.intro p{
     
     margin-bottom: clamp(1rem,30vw,7rem) ;
 }
 
-.container .about h2{
+.about h2{
     margin-bottom: clamp(1rem, 10vw, 5rem);
     
 }
 
-.container .about p{
+.about p{
     width: clamp(1rem,60vw,40rem)
+}
+
+.projects{
+    display: flex;
+    
+    
+    justify-content: center;
 }
 
 
@@ -86,7 +103,7 @@ p {
 }
 
 .red-grid-cont-1{
-    height: clamp(10rem, 60vh, 100rem);
+    height: clamp(10rem, 70vh, 100rem);
     width: clamp(10rem, 80vw, 100rem);
     top: 10px;    
     right: 10px;
@@ -132,7 +149,7 @@ p {
 }
 
 .red-2{
-    width: clamp(2rem,75vw,60rem);
+    width: clamp(2rem,40vw,60rem);
     height: clamp(2rem,40vw,20rem);
     position: absolute;
     left: -0;
