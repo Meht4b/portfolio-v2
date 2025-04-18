@@ -233,8 +233,17 @@ a:hover {
 .red-4{
     width: clamp(200px, 50vw, 700px);
 }
+body > div > section.projects > div > div > div.project.project-2 > div.red-rect.red-4.proj-rect-2{
+    background-color: rgb(126, 0, 46);
+}
 
+body > div > section.projects > div > div > div.project.project-1 > div.red-rect.red-4.proj-rect-1{
+    background-color: #6a0000;
+}
 
+body > div > section.projects > div > div > div.project.project-3 > div.red-rect.red-4.proj-rect-3{
+    background-color: #003a6a;
+}
 
 @media (max-width: 600px) {
 
