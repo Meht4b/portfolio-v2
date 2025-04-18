@@ -233,17 +233,49 @@ a:hover {
 .red-4{
     width: clamp(200px, 50vw, 700px);
 }
-body > div > section.projects > div > div > div.project.project-2 > div.red-rect.red-4.proj-rect-2{
-    background-color: rgb(126, 0, 46);
-}
 
 body > div > section.projects > div > div > div.project.project-1 > div.red-rect.red-4.proj-rect-1{
     background-color: #6a0000;
 }
 
+.project-1 a {
+
+    border-bottom: 3px solid #6A0000;
+
+}
+
+
+body > div > section.projects > div > div > div.project.project-2 > div.red-rect.red-4.proj-rect-2{
+    background-color: rgb(126, 0, 46);
+}
+.project-2 a {
+    border-bottom: 3px solid rgb(126, 0, 46);
+}
+
+.project-3 a {
+    border-bottom: 3px solid #003a6a;
+}
+
+.project-4 a {
+    border-bottom: 3px solid #37006a;
+}
+
+.project-5 a {
+    border-bottom: 3px solid #940000;
+}
+
 body > div > section.projects > div > div > div.project.project-3 > div.red-rect.red-4.proj-rect-3{
     background-color: #003a6a;
 }
+
+body > div > section.projects > div > div > div.project.project-4 > div.red-rect.red-4.proj-rect-4{
+    background-color: #37006a;
+}
+
+body > div > section.projects > div > div > div.project.project-5 > div.red-rect.red-4.proj-rect-5{
+    background-color: #940000;
+}
+
 
 @media (max-width: 600px) {
 
