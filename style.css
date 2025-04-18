@@ -39,20 +39,12 @@ h1{
 }
 
 h2{
-    font-size: clamp(2rem, 15vw, 7rem);
+    font-size: clamp(2rem, 13vw, 7rem);
     font-weight: bold;
     padding: 0;
     margin: 0;
 }
 
-h2::after{
-    content: '';
-    display: block;
-    width: 40%;
-    height: 1px;
-    background-color: var(--text-color);
-    margin-top: 10px;
-}
 
 h3{
     font-size: clamp(1.5rem, 5vw, 3rem);
@@ -84,16 +76,38 @@ p {
     
 }
 
+.about h2::after{
+    content: '';
+    display: block;
+    width: 40%;
+    height: 1px;
+    background-color: var(--text-color);
+    margin-top: 10px;
+}
+
+
 .about p{
     width: clamp(1rem,60vw,40rem)
 }
 
 .projects{
-    display: flex;
-    
-    
+    display: flex; 
     justify-content: center;
 }
+
+.projects h2{
+    margin-top: clamp(1rem, 10vw, 5rem);
+}
+
+.projects h2::after{
+    content: '';
+    display: block;
+    width: 80%;
+    height: 0.1px;
+    background-color: var(--text-color);
+    margin-top: 10px;
+}
+
 
 
 .red-grid-cont{
