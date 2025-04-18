@@ -31,7 +31,7 @@ body {
 
 h1{
     
-    font-size: clamp(4rem, 18svw, 20rem);
+    font-size: clamp(4rem, 14vw, 20rem);
     font-weight: bold;
     padding: 0px;
     margin: 0px;
@@ -39,14 +39,21 @@ h1{
 }
 
 h2{
-    font-size: clamp(2rem, 13vw, 7rem);
+    font-size: clamp(2rem, 12vw, 7rem);
     font-weight: bold;
     padding: 0;
     margin: 0;
 }
 
-
 h3{
+    font-size: clamp(1.5rem, 8vw, 4rem);
+    font-weight: 700;
+    padding: 0;
+    margin: 0;
+}
+
+
+h4{
     font-size: clamp(1.5rem, 5vw, 3rem);
     font-weight: 100;
     padding: 0;
@@ -62,14 +69,20 @@ p {
 }
 
 .intro h1{
-    
-    margin-bottom: clamp(1rem,3vh,30rem) ;
+    margin-top: 0px;
+    margin-bottom: clamp(1rem,3vh,30rem);
 }
 
 .intro p{
     
-    margin-bottom: clamp(1rem,30vw,7rem) ;
+    /*margin-bottom: clamp(1rem,calc(600px - 30vw),7rem) ;*/
+    margin-bottom: clamp(2rem,calc(1500px - 100vw),7rem);
 }
+
+.intro h4{
+    margin-bottom: 0;
+}
+
 
 .about h2{
     margin-bottom: clamp(1rem, 10vw, 5rem);
@@ -79,7 +92,7 @@ p {
 .about h2::after{
     content: '';
     display: block;
-    width: 40%;
+    width: clamp(20px,40%,250px);
     height: 1px;
     background-color: var(--text-color);
     margin-top: 10px;
@@ -90,9 +103,13 @@ p {
     width: clamp(1rem,60vw,40rem)
 }
 
+
+
 .projects{
     display: flex; 
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .projects h2{
@@ -108,7 +125,165 @@ p {
     margin-top: 10px;
 }
 
+.projects h4{
+    align-self: flex-start;
+    margin-top: clamp(1rem, 10vw, 5rem);
+    margin-bottom: clamp(1rem, 5vw, 3.5rem);
+    padding-left: clamp(10px,1vw,3rem);
+}
 
+.projects-cont{
+    box-sizing: border-box;
+    position: relative;
+    display: flex;
+    gap: 10px;
+    overflow-y: hidden; 
+    width: 95svw;
+}
+
+
+
+
+.projects-mask{
+    position: absolute;
+    /*background-image:linear-gradient(#1c1c1c 10%,transparent,transparent #1c1c1c); ;*/
+    background: rgba(0, 0, 255, 0.077);
+    height: 80vh;
+    width: 100vh;
+    z-index: 100;
+    left: -10vh;
+}
+
+.project {
+    position: relative;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#222222;
+    padding: clamp(1rem, 6vw, 2rem);
+    box-sizing: border-box;
+    box-shadow: 0 0 5px #10101080;
+    min-width: 80vw;
+    height: 80vh;
+}
+
+.project *{
+    z-index: 10;
+}
+
+.project img{
+    box-shadow: 0 0 5px #000000;
+    
+}
+
+.project h3::after{
+    content: '';
+    display: block;
+    width: clamp(200px,30%,400px);
+    height: 2px;
+    border-radius: 2%;
+    background-color: var(--text-color);
+    margin-top: 10px;
+
+}
+
+
+.project > p {
+    justify-self: flex-end;
+    
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    border-bottom: 3px solid #6A0000;
+    
+    z-index: 100;
+}
+
+a:hover {
+    color: #e22d2d;
+    transition: all 0.3s ease-in-out;
+    
+    
+}
+
+.red-4{
+    width: clamp(200px, 50vw, 700px);
+}
+
+
+
+@media (max-width: 600px) {
+
+    .project .red-4 {
+        position: absolute;
+        z-index: 0;
+        right: 30px;
+        top: 90px;
+        height: 150px;
+        width: 200px;
+        
+    }
+
+    .red-3{
+        top: 120vh;
+        height: 150px;
+        width: 100px;
+        left: 0;
+        position: absolute;
+    }
+
+    .project h3{
+        margin-bottom: 30px;
+    }
+
+    .project img{
+        width: 90%;
+    }
+    .project-desc{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    a{
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 600px) {
+
+    .project .red-4 {
+        position: absolute;
+        z-index: 0;
+        right: 30px;
+        top: 120px;
+        height: 250px;
+        
+        
+    }
+
+
+    .project h3{
+        margin-bottom: 20px;
+    }
+
+    .project img{
+        width: 50%
+    }
+    .project-desc{
+        display: flex;
+        gap: 30px;
+    }
+
+    a{
+        font-size: 2rem;
+    }
+    
+}
 
 .red-grid-cont{
     z-index: -2;
@@ -119,7 +294,7 @@ p {
     position: absolute;
     z-index: -3;
     background-image:url('assets/grid.png');
-    background-size: 3.5rem 3.5rem;
+    background-size: clamp(3.5rem,10vw,5rem) clamp(3.5rem,10vw,5rem);
     width: 100%;height: 100%;
 }
 
@@ -131,14 +306,14 @@ p {
 }
 
 .red-grid-cont-1{
-    height: clamp(10rem, 70vh, 100rem);
+    height: clamp(10rem, 75vh, 200rem);
     width: clamp(10rem, 80vw, 100rem);
     top: 10px;    
     right: 10px;
 }
 
 .red-grid-cont-2{
-    height: clamp(10rem, 80vh, 100rem);
+    height: clamp(40rem, 70vw, 100rem);
     width: clamp(10rem, 50vw, 100rem);
     top: 80vh;    
     left: 10px;
@@ -148,22 +323,32 @@ p {
 .red-rect{
     background-color: #550000;
     z-index: -1;
+    
 }
 
 
 .red-1{
-    width: clamp(2rem,75vw,60rem);
+    width: clamp(2rem,75vw,625px);
     height: clamp(2rem,40vw,20rem);
     position: absolute;
-    right: 1rem;
+    right: 0;
     top: 3.5rem;
     
 }
 
 .red-2{
-    width: clamp(2rem,40vw,60rem);
-    height: clamp(2rem,40vw,20rem);
+    width: clamp(2rem,40vw,20rem);
+    height: clamp(2rem,40vw,16rem);
     position: absolute;
     left: -0;
-    top: 25rem;
+    top: clamp(25rem,50vw, 40rem);
+}
+
+.red-grid-cont-3{
+    height: clamp(10rem, 75vh, 200rem);
+    width: clamp(10rem, 80vw, 100rem);
+    /*top: 1000px;    */
+    top: 1700px;
+    top: clamp(1000px,200vw,1700px);
+    right: 0;
 }
