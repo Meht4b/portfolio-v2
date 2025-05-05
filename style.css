@@ -195,7 +195,7 @@ p {
 }
 
 .projects-mask{
-    position: absolute;
+    position: sticky;
     background-image:linear-gradient(90deg,#1c1c1c 1%,transparent 4%,transparent 96%, #1c1c1c 99%); ;
     
     height: 80vh;
