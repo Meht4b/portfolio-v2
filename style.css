@@ -205,9 +205,9 @@ p {
     box-sizing: border-box;
     position: relative;
     display: flex;
-    gap: 10px;
-    overflow-x: hidden;
-    width: 95svw;
+    
+    overflow-y: scroll;
+    width:99vw;
     height: 80vh;
     scrollbar-width: none; /* For Firefox */
     -ms-overflow-style: none; /* For Internet Explorer and Edge */
@@ -222,28 +222,55 @@ p {
     position: absolute;
     left: clamp(-2rem, -5vw, -2rem);
     display: flex;
-    gap: 30px;
-
-
-    padding-left: 5vw;
+    padding-left: clamp(2rem,10vw,10rem);
+    padding-right: clamp(2rem,10vw,10rem);
+    transform: translateX();
+    gap: clamp(2rem, 10vw, 5rem);
+    overflow-x: auto; 
+    
     
 
-    
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
 }
 
 
-
-.projects-mask{
-    position: absolute;
-    background-image:linear-gradient(90deg,#1c1c1c 1%,transparent 4%,transparent 96%, #1c1c1c 99%); ;
+.proj-buttons-cont{
+    background-image: linear-gradient(to right, #1B1B1B,transparent 10% 90%, #1B1B1B);
+    position: sticky;
+    display: flex;
+    align-items: center;
     
-    height: 80vh;
-    width: 100%;
-    z-index: 100;
+    
+    left: 0;
+    height: 100%;
+    justify-content: space-between;
+    width: 140%;
+    z-index: 20;
     
 }
+
+.proj-btn{
+    transition: 0.2s;
+    background:none;
+    height: min-content;
+
+    border: none;
+    opacity: 0.5;
+    margin: 0;
+    padding: 0;
+}
+
+.proj-btn:hover{
+    cursor: pointer;
+    background:none;
+    border: none;
+    opacity: 1;
+}
+
+.proj-btn img{
+    height: clamp(50px, 10vw, 120px);
+}
+
+
 
 .project {
     position: relative;
@@ -305,47 +332,6 @@ a:hover {
     width: clamp(200px, 50vw, 700px);
 }
 
-body > div > section.projects > div > div > div.project.project-1 > div.red-rect.red-4.proj-rect-1{
-    background-color: #6a0000;
-}
-
-.project-1 a {
-
-    border-bottom: 3px solid #6A0000;
-
-}
-
-
-body > div > section.projects > div > div > div.project.project-2 > div.red-rect.red-4.proj-rect-2{
-    background-color: rgb(126, 0, 46);
-}
-.project-2 a {
-    border-bottom: 3px solid rgb(126, 0, 46);
-}
-
-.project-3 a {
-    border-bottom: 3px solid #003a6a;
-}
-
-.project-4 a {
-    border-bottom: 3px solid #37006a;
-}
-
-.project-5 a {
-    border-bottom: 3px solid #940000;
-}
-
-body > div > section.projects > div > div > div.project.project-3 > div.red-rect.red-4.proj-rect-3{
-    background-color: #003a6a;
-}
-
-body > div > section.projects > div > div > div.project.project-4 > div.red-rect.red-4.proj-rect-4{
-    background-color: #37006a;
-}
-
-body > div > section.projects > div > div > div.project.project-5 > div.red-rect.red-4.proj-rect-5{
-    background-color: #940000;
-}
 
 
 @media (max-width: 600px) {
