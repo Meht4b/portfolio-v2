@@ -220,7 +220,7 @@ p {
 .projects-inner-cont{
     box-sizing: border-box;
     position: absolute;
-    left: clamp(-2rem, -5vw, -2rem);
+    
     display: flex;
     padding-left: clamp(2rem,10vw,10rem);
     padding-right: clamp(2rem,10vw,10rem);
@@ -384,7 +384,7 @@ a:hover {
         right: 30px;
         top: 120px;
         height: 250px;
-        
+        width: 50vw;
         
     }
 
