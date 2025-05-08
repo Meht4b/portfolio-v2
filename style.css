@@ -93,9 +93,16 @@ body {
     height: clamp(10rem, 75vh, 200rem);
     width: clamp(10rem, 80vw, 100rem);
     /*top: 1000px;    */
-    top: 1700px;
+
     top: clamp(1000px,200vw,1700px);
     right: 0;
+}
+.red-grid-cont-4{
+    height: clamp(10rem, 75vh, 200rem);
+    width: clamp(10rem, 80vw, 100rem);
+    top: 1700px;
+    top: clamp(2000px,180vw,3700px);
+    left: 0;
 }
 
 h1{
@@ -228,7 +235,7 @@ p {
     gap: clamp(2rem, 10vw, 5rem);
     overflow-x: auto; 
     height: 80vh;
-    width: 100vw;
+    width: 99vw;
     
 
 }
@@ -240,7 +247,7 @@ p {
     display: flex;
     align-items: center;
     
-    
+    pointer-events: none;
     left: 0;
     height: 100%;
     justify-content: space-between;
@@ -253,7 +260,7 @@ p {
     transition: 0.2s;
     background:none;
     height: min-content;
-
+    pointer-events: all;
     border: none;
     opacity: 0.5;
     margin: 0;
@@ -269,6 +276,7 @@ p {
 
 .proj-btn img{
     height: clamp(50px, 10vw, 120px);
+    
 }
 
 
@@ -289,15 +297,14 @@ p {
     max-width: 80vw;
     height: 80vh;
     transition: 0.2s;
+    z-index: 1;
 }
 
-.project *{
-    z-index: 10;
-}
+
 
 .project img{
     box-shadow: 0 0 5px #000000;
-    
+    z-index: 2;
 }
 
 .project h3::after{
@@ -312,12 +319,13 @@ p {
 }
 
 
-.project > p {
+.project  p {
     justify-self: flex-end;
-    
+    z-index: 3;
 }
 
 a {
+
     text-decoration: none;
     color: inherit;
     border-bottom: 3px solid #6A0000;

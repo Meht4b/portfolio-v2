@@ -1,11 +1,9 @@
 
-let items = document.querySelectorAll('.projects-inner-cont .project');
-let next = document.querySelector('.proj-btn-right');
-let prev = document.querySelector('.proj-btn-left');
-
-let active = 0;
-function loadShow(){
+function loadShow(items,active){
     let stt = 0;
+    
+    
+
 
     items.forEach(item => {
         item.style.transform = 'none';
@@ -56,13 +54,47 @@ function loadShow(){
     
 }
 
-loadShow();
-next.onclick = function(){
-    active = active + 1 < items.length ? active + 1 : 0;
-    loadShow();
+let next1 = document.querySelector('.proj-btn-right-1');
+let prev1 = document.querySelector('.proj-btn-left-1');
+let active1 = 0;
+let items1 = document.querySelectorAll('.projects-inner-cont-1 .project');
+
+loadShow(items1, active1);
+next1.onclick = function() {
+    active1 = active1 + 1 < items1.length ? active1 + 1 : 0;
+    loadShow(items1, active1);
 }
-prev.onclick = function(){
-    active = active - 1 >= 0 ? active - 1 : items.length-1;
-    loadShow();
+prev1.onclick = function() {
+    active1 = active1 - 1 >= 0 ? active1 - 1 : items1.length - 1;
+    loadShow(items1, active1);
 }
 
+let next2 = document.querySelector('.proj-btn-right-2');
+let prev2 = document.querySelector('.proj-btn-left-2');
+let active2 = 0;
+let items2 = document.querySelectorAll('.projects-inner-cont-2 .project');
+
+loadShow(items2, active2);
+next2.onclick = function() {
+    active2 = active2 + 1 < items2.length ? active2 + 1 : 0;
+    loadShow(items2, active2);
+}
+prev2.onclick = function() {
+    active2 = active2 - 1 >= 0 ? active2 - 1 : items2.length - 1;
+    loadShow(items2, active2);
+}
+
+let next3 = document.querySelector('.proj-btn-right-3');
+let prev3 = document.querySelector('.proj-btn-left-3');
+let active3 = 0;
+let items3 = document.querySelectorAll('.projects-inner-cont-3 .project');
+
+loadShow(items3, active3);
+next3.onclick = function() {
+    active3 = active3 + 1 < items3.length ? active3 + 1 : 0;
+    loadShow(items3, active3);
+}
+prev3.onclick = function() {
+    active3 = active3 - 1 >= 0 ? active3 - 1 : items3.length - 1;
+    loadShow(items3, active3);
+}
