@@ -227,7 +227,8 @@ p {
     transform: translateX();
     gap: clamp(2rem, 10vw, 5rem);
     overflow-x: auto; 
-    
+    height: 80vh;
+    width: 100vw;
     
 
 }
@@ -273,7 +274,8 @@ p {
 
 
 .project {
-    position: relative;
+    position: absolute;
+
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -284,7 +286,9 @@ p {
     box-sizing: border-box;
     box-shadow: 0 0 5px #10101080;
     min-width: 80vw;
+    max-width: 80vw;
     height: 80vh;
+    transition: 0.2s;
 }
 
 .project *{
